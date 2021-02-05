@@ -131,10 +131,10 @@
     
                                 -->
 								<p>1. 在DW视图里编辑文本时，按回车会生成新的段落。</p>				
-							    <p>2. html标签成对成对的，藏在&lt; &gt;和&lt;/ &gt;中间的是它的内容。标签内容可以是新的标签，  嵌套多少次都没问题。    标签头&lt; &gt;标签名内可以定义属性，不同的属性用空格隔开。<br>
+							    <p>2. html标签成对成对的，藏在&lt; &gt;和&lt;/ &gt;中间的是它的内容。标签内容可以是新的标签，嵌套多少次都没问题。    标签头&lt; &gt;标签名内可以定义属性，不同的属性用空格隔开。<br>
 								    例如，在a标签【&lt;a href="z-page001.html"&gt;第一篇文&lt;/a&gt;】中，href是这个标签的属性名，“=”后的是属性值；【第一篇文】是这个标签的内容。</p>
 							    <p>3.&emsp;如果打算在html网页上写文章的话，先在Word里面写好，把转义字符查找替换后，再粘贴到DW里面。不然直接在DW编辑会    十分麻烦，今天我就是一个例子。</p>
-                                <p>4.&emsp;经常见到到的代码。
+                                <p>4.&emsp;经常见到的代码。
                                     <table border="1">
                                         <tr> 
                                             <td> &amp;quot;   </td>
@@ -183,9 +183,35 @@
                                         
                                     </table>
                                 <p>6.&emsp;我今天写的东西是这样的……就这几行字。<br>
-                                   <span class="image featured"><img src="pages/001/pic03.jpg" alt="" /></span> 
+                                   <span class="image featured"><img id = "PicOfCode" src="pages/001/pic03.jpg" alt="" /></span> 
                                 </p>
-							
+                                <p>7. 然后我刚刚就发现了一个网页。可以文字图片表格之类的都能转成html语言。这样的话什么麻烦的转换都不用想了！<a href="https://wordhtml.com/" target="_blank">https://wordhtml.com/</a></p>
+                                <p>8. 我还要附上一个我现在学html的网站链接，方便路上也看一看。<a href="http://c.biancheng.net/html/" target="_blank">http://c.biancheng.net/html/</a></p>
+							    <p>9.&emsp;网址的路径那个斜杠，是和问号共用一个按键的【/ 】，叫做【斜杠】。它也可以表示除号。和汉语顿号共用按键的【\】叫做【反斜杠】，某些编程语言会用它来表示符号的转义。</p>
+                                <ol start="10">
+                                    <li>行内元素如&lt;span&gt;，可以和其他元素共用浏览器的一行显示。块状元素如&lt;p&gt;在浏览器中独占一行。</li>
+                                    <li>有序列表用&lt;ol&gt;标签表示，是order list的意思，他会将里面的各个元素用编号标起来。有序列表的元素用&lt;li&gt;表示。我第10项之后都用了ol标签了。<br>
+                                        <em>代码如下：</em><br>
+                                        <font color="#501AA8">&lt;ol start="10"&gt;&nbsp; &lt;li&gt;文本1&lt;/li&gt;&nbsp; &lt;li&gt;文本2&lt;/li&gt;&nbsp; &lt;/ol&gt;</font></li>
+                                    <li>无续列表用&lt;ul&gt;标签表示，元素也是&lt;li&gt;。但是列表元素之前的符号会变成圆点。<br>
+                                        <em>代码如下：</em>
+                                        <font color="#501AA8">&lt;ul start="10"&gt;&nbsp; &lt;li&gt;文本1&lt;/li&gt;&nbsp; &lt;li&gt;文本2&lt;/li&gt;&nbsp; &lt;/ul&gt;</font></li>
+                                        <em>显示效果：</em>
+                                        <font color="#501AA8"><ul><li>文本1</li><li >文本2</li></ul></font></li>
+                                    <li>&lt;dl&gt; 标签用于创建定义列表。它是由定义标题和定义描述两部分组成的，<em>具体语法格式如下：</em>
+                                     <p class="info-box"><span style="color: #800080;">&lt;dl&gt;</span><br /><span style="color: #800080;">&nbsp; &nbsp; &nbsp; &lt;dt&gt;定义标题&lt;dt&gt;</span><br /><span style="color: #800080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;dd&gt;定义描述&lt;dd&gt;</span><br /><span style="color: #800080;">&nbsp; &nbsp; &nbsp; &lt;dd&gt;定义描述&lt;dd&gt;</span><br /><span style="color: #800080;">&lt;/dl&gt;</span></p>
+                                    <em>显示效果：</em>
+                                    <dl>
+                                    <dt><span style="color: #800080;">定义标题</span></dt>
+                                    <dd><span style="color: #800080;">定义描述</span></dd>
+                                    <dd><span style="color: #800080;">定义描述</span></dd>
+                                    </dl></li>
+                                    <li>绝对路径和相对路径。本地绝对路径一般指从盘符开始，到文件名称结束；网络绝对路径指从网站的域名开始，到文件名结束，在使用时需要加上协议。相对路径以当前文件位置为参考点，到文件名称结束，其中，【./】代表当前位置（可省略），【../】 表示上一级目录， 【../../ 】表示上两级目录，以此类推。
+                                    <p>绝对路径：<br>①D:/Hbulider/HBuilder/tools/nview/index.js<br />②C:/Users/admin/Desktop/C语言中文网/url/url.html<br />③http://c.biancheng.net/view/7410.html<br>相对路径：<br>①./html/login.html<br>②html/login.html<br>③../html/login.html</p></li>
+                                    <li>定义锚点。在网页恰当的标签里面加上【id】这个属性。<br>像这样子：<span class="sh_keyword">&lt;h2</span> <span class="sh_type">id</span><span class="sh_symbol">=</span><span class="sh_string">"index"</span><span class="sh_keyword">&gt;</span>这是h2标题<span class="sh_keyword">&lt;/h2&gt;</span></li>
+                                    <li>锚点链接，可以跳转到指定页面中指定位置的链接，用&lt;a&gt;标签表示。【#】后跟上定义好的锚点id，id的top代表顶部（省略也行）。<br>当前页面是这样的：<span class="sh_keyword">&lt;a</span> <span class="sh_type">href</span><span class="sh_symbol">=</span><span class="sh_string">"#top"</span><span class="sh_keyword">&gt;</span>回到顶部<span class="sh_keyword">&lt;/a&gt;&nbsp; &nbsp;或者&nbsp; &nbsp;&nbsp;&lt;a&nbsp;<span class="sh_type">href</span><span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_keyword">&gt;</span>回到顶部<span class="sh_keyword">&lt;/a&gt;</span></span><br>跳到其他页面是这样的：<span class="sh_keyword">&lt;a</span> <span class="sh_type">href</span><span class="sh_symbol">=</span><span class="sh_string">"./index.html#index"</span><span class="sh_keyword">&gt;</span>跳转到index页面<span class="sh_keyword">&lt;/a&gt;</span><br>
+                                    现在就做了两个锚点链接。点击试试。<br><a href="#PicOfCode">跳到本页的代码图</a>&nbsp; &nbsp;&nbsp;<a href="index.html#mmiddle">跳到博客首页的中部</a></li>
+                                    </ol>
 <footer>
 		  <ul class="stats">
 			  <li><a href="#">公开&nbsp;</a></li>
